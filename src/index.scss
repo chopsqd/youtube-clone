@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,27 +10,27 @@ a {
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
     height: 5px;
-}
 
-::-webkit-scrollbar-thumb {
-    background-color: rgb(114, 113, 113);
-    border-radius: 10px;
-    height: 200px;
-}
+    &-thumb {
+        background-color: rgb(114, 113, 113);
+        border-radius: 10px;
+        height: 200px;
+    }
 
-::-webkit-scrollbar-track {
-    background-color: transparent;
+    &-track {
+        background-color: transparent;
+    }
 }
 
 .category-btn:hover {
     background-color: #FC1503 !important;
     color: white !important;
-}
 
-.category-btn:hover span{
-    color: white !important;
+    & span{
+        color: white !important;
+    }
 }
 
 .react-player {
