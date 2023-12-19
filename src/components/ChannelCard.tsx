@@ -2,8 +2,9 @@ import {Box, CardContent, CardMedia, Typography} from "@mui/material";
 import {Link} from "react-router-dom";
 import {CheckCircle} from "@mui/icons-material";
 import {demoProfilePicture} from "../utils/constants";
+import {IVideo} from "../types";
 
-const ChannelCard = ({channelDetail}: { channelDetail: any }) => (
+const ChannelCard = ({channelDetail, mt = 0}: { channelDetail: IVideo | null, mt?: number }) => (
     <Box
         sx={{
             boxShadow: "none",
@@ -16,7 +17,8 @@ const ChannelCard = ({channelDetail}: { channelDetail: any }) => (
                 md: "320px"
             },
             height: "320px",
-            margin: "auto"
+            margin: "auto",
+            marginTop: `${mt}px`
         }}
     >
         <Link to={`/channel/${channelDetail?.id?.channelId}`}>

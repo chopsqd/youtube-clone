@@ -30,5 +30,8 @@ export interface IVideo {
         channelTitle: string
         liveBroadcastContent: string
         publishTime: string
+    },
+    statistics: {
+        subscribersCount: string
     }
 }
