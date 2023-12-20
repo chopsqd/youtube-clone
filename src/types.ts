@@ -33,5 +33,7 @@ export interface IVideo {
     },
     statistics: {
         subscribersCount: string
+        viewCount: string
+        likeCount: string
     }
 }

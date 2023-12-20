@@ -2,14 +2,19 @@ import {Box, Stack} from "@mui/material";
 import {IVideo} from "../types";
 import {ChannelCard, VideoCard} from "./index";
 
-const Videos = ({videos}: { videos: Array<IVideo> }) => (
+interface IVideosProps {
+    videos: Array<IVideo>
+    direction?: "row" | "column"
+}
+
+const Videos = ({videos, direction = "row"}: IVideosProps) => (
     <Stack
-        direction={"row"}
+        direction={direction}
         flexWrap={"wrap"}
         justifyContent={"start"}
         gap={2}
     >
-        {videos.map((video, idx) => (
+        {videos.map((video: IVideo, idx: number) => (
             <Box key={idx}>
                 {video.id.videoId && <VideoCard video={video} />}
                 {video.id.channelId && <ChannelCard channelDetail={video} />}
